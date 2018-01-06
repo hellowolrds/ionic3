@@ -43,9 +43,7 @@ export class HomePage {
   			}
   		
   		})
-      .catch(err=>{
-        throw err;
-      });
+      .catch(this.handleError);
   }
 
   getSafeUrl (arr) {
@@ -65,6 +63,7 @@ export class HomePage {
 	  			loading.dismiss();
   			}
   		})
+      .catch(this.handleError);
   }
 
   // 这个方法主要处理的是页面跳转
@@ -72,5 +71,10 @@ export class HomePage {
   	this.navCtrl.push(DetailPage, {
   		article_id: id
   	});
+  }
+
+  private handleError(error: any): Promise<any> {
+    console.error('An error occurred', error); // for demo purposes only
+    return Promise.reject(error.message || error);
   }
 }
