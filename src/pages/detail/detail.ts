@@ -11,7 +11,7 @@ import { LoadingController } from 'ionic-angular';
 })
 export class DetailPage {
   private blog = '';
-  private baseUrl = '/api/detail';
+  private baseUrl = '/api/api/detail';
   constructor(public navCtrl: NavController, public loadingCtrl: LoadingController,
   	private http: Http, public navParams: NavParams) {
   	// 开启加载动画

@@ -7,23 +7,23 @@
   },
   "proxies": [
   	{
-  		"path":"/api/banner",
+  		"path":"/api/api/banner",
   		"proxyUrl": "http://tbhomsj01.rlqy58t.c40.542b.top/api/api/banner"
   	},
     {
-      "path":"/api/detail",
+      "path":"/api/api/detail",
       "proxyUrl": "http://tbhomsj01.rlqy58t.c40.542b.top/api/api/detail"
     },
     {
-      "path":"/api/blog",
+      "path":"/api/api/blog",
       "proxyUrl": "http://tbhomsj01.rlqy58t.c40.542b.top/api/api/blog"
     },
     {
-      "path":"/api/all_blog",
+      "path":"/api/api/all_blog",
       "proxyUrl": "http://tbhomsj01.rlqy58t.c40.542b.top/api/api/all_blog"
     },
     {
-      "path":"/api/all_time",
+      "path":"/api/api/all_time",
       "proxyUrl": "http://tbhomsj01.rlqy58t.c40.542b.top/api/api/all_time"
     }
   	

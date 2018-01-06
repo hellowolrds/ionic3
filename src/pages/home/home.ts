@@ -20,7 +20,7 @@ import { DetailPage } from '../detail/detail';
 export class HomePage {
   public banner = [];
   public blog = [];
-  private bannerUrl = "/api/banner";
+  private bannerUrl = "/api/api/banner";
 
   @ViewChild(Slides) slides: Slides;
 
@@ -56,7 +56,7 @@ export class HomePage {
 
   // 获取最近的博客
   getLastBlog (loading) {
-  	this.http.get('/api/blog')
+  	this.http.get('/api/api/blog')
   		.toPromise()
   		.then(res=> {
   			if (res) {

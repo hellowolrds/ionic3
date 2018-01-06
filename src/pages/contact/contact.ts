@@ -16,7 +16,7 @@ import { DetailPage } from '../detail/detail';
 export class ContactPage {
 
   public time = [];
-  private timeUrl = "/api/all_time";
+  private timeUrl = "/api/api/all_time";
   constructor(public navCtrl: NavController, private http: Http,
   	private sanitizer: DomSanitizer, public loadingCtrl: LoadingController) {
   	// 开启加载动画

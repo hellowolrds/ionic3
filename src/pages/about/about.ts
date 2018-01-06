@@ -17,7 +17,7 @@ import { DetailPage } from '../detail/detail';
 export class AboutPage {
 
   public blog = [];
-  private bannerUrl = "/api/all_blog";
+  private bannerUrl = "/api/api/all_blog";
 
   constructor(public navCtrl: NavController, private http: Http,
   	private sanitizer: DomSanitizer, public loadingCtrl: LoadingController) {
