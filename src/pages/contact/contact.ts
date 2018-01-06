@@ -34,7 +34,9 @@ export class ContactPage {
 	  			loading.dismiss();
   			}
   		
-  		})
+  		}, err=> {
+        console.log(err);
+      })
       .catch(this.handleError);
   }
 

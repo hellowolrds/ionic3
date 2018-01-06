@@ -26,7 +26,9 @@ export class DetailPage {
   		.then(res=>{
   			this.blog = res.json().data;
   			loading.dismiss();
-  		})
+  		}, err=> {
+        console.log(err);
+      })
       .catch(this.handleError);
   }
 

@@ -36,7 +36,9 @@ export class AboutPage {
 	  			loading.dismiss();
   			}
   		
-  		})
+  		}, err=> {
+        console.log(err);
+      })
       .catch(this.handleError);
   }
 

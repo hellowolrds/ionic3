@@ -42,7 +42,9 @@ export class HomePage {
 	  			this.getLastBlog(loading);
   			}
   		
-  		})
+  		}, err=> {
+        console.log(err);
+      })
       .catch(this.handleError);
   }
 
@@ -62,7 +64,9 @@ export class HomePage {
 	  			this.getSafeUrl(this.blog);
 	  			loading.dismiss();
   			}
-  		})
+  		}, err=> {
+        console.log(err);
+      })
       .catch(this.handleError);
   }
 
