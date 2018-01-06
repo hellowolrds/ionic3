@@ -1,11 +1,23 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      博客浏览
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+	<!-- 最近博客浏览 -->
+	<h3>最近博客</h3>
+	<ion-card *ngFor="let data of blog">
+		<ion-card-header>
+		    <img [src]="data.banner_image" alt="">
+		</ion-card-header>
+		<ion-card-content>
+		    <h4>{{data.article_name}}</h4>
+		    <p>BY ADMIN / {{data.tags}} / {{data.article_click}}</p>
+		    <p>{{data.article_time*1000|date:"yyyy-MM-dd hh:mm:ss"}}</p>
+		    <p><span (tap)="redirect(data.article_id)">阅读 <ion-icon name="md-arrow-forward"></ion-icon></span></p>
+		</ion-card-content>
+	</ion-card>
 </ion-content>

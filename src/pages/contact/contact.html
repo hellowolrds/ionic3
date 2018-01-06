@@ -1,17 +1,21 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      时光轴
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  	<!-- 最近博客浏览 -->
+	<h3>时光轴</h3>
+	<ion-card *ngFor="let data of time">
+		<ion-card-header>
+		    <img [src]="data.time_image" alt="">
+		</ion-card-header>
+		<ion-card-content>
+		    <h4>{{data.time_content}}</h4>
+		    <p>BY ADMIN / {{data.time_time*1000|date:"yyyy-MM-dd hh:mm:ss"}}</p>
+		</ion-card-content>
+	</ion-card>
 </ion-content>

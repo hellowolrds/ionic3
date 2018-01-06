@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{blog.article_name}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- 文章标题  -->
+  <h3>{{blog.article_name}}</h3>
+  <p>{{blog.article_time*1000|date:"yyyy-MM-dd hh:mm:ss"}} by Admin / {{blog.tags}} / {{blog.article_click}}</p>
+  <div class="content" [innerHTML]='blog.article_content'>
+  </div>
+</ion-content>

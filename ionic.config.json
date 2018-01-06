@@ -4,5 +4,28 @@
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "proxies": [
+  	{
+  		"path":"/api/banner",
+  		"proxyUrl": "http://tbhomsj01.rlqy58t.c40.542b.top/api/api/banner"
+  	},
+    {
+      "path":"/api/detail",
+      "proxyUrl": "http://tbhomsj01.rlqy58t.c40.542b.top/api/api/detail"
+    },
+    {
+      "path":"/api/blog",
+      "proxyUrl": "http://tbhomsj01.rlqy58t.c40.542b.top/api/api/blog"
+    },
+    {
+      "path":"/api/all_blog",
+      "proxyUrl": "http://tbhomsj01.rlqy58t.c40.542b.top/api/api/all_blog"
+    },
+    {
+      "path":"/api/all_time",
+      "proxyUrl": "http://tbhomsj01.rlqy58t.c40.542b.top/api/api/all_time"
+    }
+  	
+  ]
 }

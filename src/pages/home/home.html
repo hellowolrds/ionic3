@@ -4,6 +4,63 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
- 
+<ion-content>
+ 	<!-- 首页轮播 -->
+ 	<ion-slides pager=true autoplay="1000" loop=true *ngIf="banner.length>1">
+	  <ion-slide *ngFor="let data of banner" (tap)="redirect(data.article_id)">
+	    <h2>{{data.article_name}}</h2>
+	    <img [src]="data.banner_image" alt="">
+	  </ion-slide>
+	</ion-slides>
+	<!-- 个人简介 -->
+	<h3>个人技术</h3>
+	<div class="sp_item">
+		<div class="sp_icon">
+			<ion-icon ios="ios-aperture" md="md-aperture"></ion-icon>
+		</div>
+		<div class="sp_text">
+			<h4>HTML5CSS3</h4>
+			<p>熟练使用html5css3构建web界面，快速还原设计稿</p>
+		</div>
+	</div>
+	<div class="sp_item">
+		<div class="sp_icon">
+			 <ion-icon ios="ios-bookmark" md="md-bookmark"></ion-icon>
+		</div>
+		<div class="sp_text">
+			<h4>JAVASRIPT</h4>
+			<p>熟练掌握原生JavaScript操作DOM，以及面向对象思维</p>
+		</div>
+	</div>
+	<div class="sp_item">
+		<div class="sp_icon">
+			<ion-icon ios="ios-cafe" md="md-cafe"></ion-icon>
+		</div>
+		<div class="sp_text">
+			<h4>PHP</h4>
+			<p>熟悉php基本语法和sql语句，熟练使用thinkphp框架</p>
+		</div>
+	</div>
+	<div class="sp_item">
+		<div class="sp_icon">
+			<ion-icon ios="ios-compass" md="md-compass"></ion-icon>
+		</div>
+		<div class="sp_text">
+			<h4>MYSQL</h4>
+			<p>熟悉mysql服务器的搭建，以及常用的sql命令</p>
+		</div>
+	</div>
+	<!-- 最近博客浏览 -->
+	<h3>最近博客</h3>
+	<ion-card *ngFor="let data of blog">
+		<ion-card-header>
+		    <img [src]="data.banner_image" alt="">
+		</ion-card-header>
+		<ion-card-content>
+		    <h4>{{data.article_name}}</h4>
+		    <p>BY ADMIN / {{data.tags}} / {{data.article_click}}</p>
+		    <p>{{data.article_time*1000|date:"yyyy-MM-dd hh:mm:ss"}}</p>
+		    <p><span (tap)="redirect(data.article_id)">阅读 <ion-icon name="md-arrow-forward"></ion-icon></span></p>
+		</ion-card-content>
+	</ion-card>
 </ion-content>
