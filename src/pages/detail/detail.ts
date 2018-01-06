@@ -24,7 +24,7 @@ export class DetailPage {
   	this.http.get(this.baseUrl)
   		.toPromise()
   		.then(res=>{
-  			this.blog = JSON.parse(res._body).data;
+  			this.blog = res.json().data;
   			loading.dismiss();
   		});
   }

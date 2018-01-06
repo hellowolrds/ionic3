@@ -30,8 +30,8 @@ export class AboutPage {
   	this.http.get(this.bannerUrl)
   		.toPromise()
   		.then(response=> {
-  			if (response._body) {
-  				this.blog = JSON.parse(response._body).data;
+  			if (response) {
+  				this.blog = response.json().data;
 	  			console.log(this.blog);
 	  			loading.dismiss();
   			}

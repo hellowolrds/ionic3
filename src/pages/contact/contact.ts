@@ -28,8 +28,8 @@ export class ContactPage {
   	this.http.get(this.timeUrl)
   		.toPromise()
   		.then(response=> {
-  			if (response._body) {
-  				this.time= JSON.parse(response._body).data;
+  			if (response) {
+  				this.time= response.json().data;
 	  			console.log(this.time);
 	  			loading.dismiss();
   			}

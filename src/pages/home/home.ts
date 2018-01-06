@@ -36,13 +36,16 @@ export class HomePage {
   	this.http.get(this.bannerUrl)
   		.toPromise()
   		.then(response=> {
-  			if (response._body) {
-  				this.banner = JSON.parse(response._body).data;
+  			if (response) {
+  				this.banner = response.json().data;
 	  			this.getSafeUrl(this.banner);
 	  			this.getLastBlog(loading);
   			}
   		
   		})
+      .catch(err=>{
+        throw err;
+      });
   }
 
   getSafeUrl (arr) {
@@ -56,8 +59,8 @@ export class HomePage {
   	this.http.get('/api/blog')
   		.toPromise()
   		.then(res=> {
-  			if (res._body) {
-  				this.blog = JSON.parse(res._body).data;
+  			if (res) {
+  				this.blog = res.json().data;;
 	  			this.getSafeUrl(this.blog);
 	  			loading.dismiss();
   			}
